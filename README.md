@@ -88,12 +88,21 @@ Modifying data values includes removing rows or columns, replacing values, or ge
 
 When inspecting our wiki_movies data, we notice that we have many, many columns. So much so that the pandas dataframe does not even allow us to view all of them at once. In order to get a sense of how many columns/what kind of data we are working with, we convert the columns into a list.
 
-We can then select the columns that will be useful to us and filter out columns we will not need in our analysis. We will loop through the wiki movies JSON file and keep entries that have a director key, an IMDB link key,and do not have # of seasons key.
+We can then select the columns that will be useful to us and filter out columns we will not need in our analysis. We will loop through the wiki movies JSON file and keep entries that have a director key, an IMDB link key,and do not have # of seasons key. We can use list comprehensions to filter through our data. This is a compact way to apply a function to every element in a list. 
  
  
  
  
- 
+ We will create a function that performs our cleaning process. Remember there are 4 basic parts to a function:
+ 1) Name
+ 2) Parameters
+ 3) Code-block
+ 4) Return-value
+
+Let's discuss *scope* . Inside our code block for a function, we can use variable that were created outside the function and initialize new variables inside the function as well. This is called the "scope" of the variables.
+* Variables created OUTSIDE the function are called *global* variables
+*  New variables created INSIDE the function are called *local* variables
+*  The hierarchy of variables is called the scope
  
  
  
